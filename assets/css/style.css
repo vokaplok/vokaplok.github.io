@@ -37,8 +37,8 @@ body{
 .border_wrapper{
     left: 191px;
     top: 278px;
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 53%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -52,7 +52,7 @@ body{
 .center{
     overflow: hidden;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-right: -50%;

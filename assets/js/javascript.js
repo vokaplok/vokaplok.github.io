@@ -4,6 +4,7 @@ let start = document.querySelector('#start');
 let balance = document.querySelector('#balance');
 let add = document.querySelector('#add');
 var akaudio = new Audio("./assets/audio/ak.mp3");
+var payout = new Audio("./assets/audio/payout.wav");
 let cash = 0;
 let minus = 20;
 var audio = false;
@@ -67,6 +68,7 @@ balance.innerHTML = cash;
 
 //add cash
 function addPTS(){
+    payout.play();
     add.blur();
     cash += 100;
     balance.innerHTML = cash;

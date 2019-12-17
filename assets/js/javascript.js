@@ -5,6 +5,7 @@ let balance = document.querySelector('#balance');
 let add = document.querySelector('#add');
 var akaudio = new Audio("./assets/audio/ak.mp3");
 var payout = new Audio("./assets/audio/payout.wav");
+var spining = new Audio("./assets/audio/spining.wav");
 let cash = 0;
 let minus = 20;
 var audio = false;
@@ -82,6 +83,7 @@ function spin(){
         akaudio.play();
         audio = true;
     }
+    spining.play();
     if(cash >= minus){
         start.setAttribute('disabled', true);
         cash -= minus;

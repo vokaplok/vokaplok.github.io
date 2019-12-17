@@ -84,6 +84,7 @@ function spin(){
         audio = true;
     }
     spining.play();
+    spining.setVolume(10); 
     if(cash >= minus){
         start.setAttribute('disabled', true);
         cash -= minus;

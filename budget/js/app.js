@@ -1,11 +1,15 @@
 class SORT {
-    sortingByAmount(arr, type){
-        var byAmount = arr.slice(0);
+    constructor(arr, type){
+        this.arr = arr;
+        this.type = type;
+    }
+    sortingByAmount() {
+        var byAmount = this.arr.slice(0);
         byAmount.sort(function(a,b) {
             return a.amount - b.amount;
         });
-        if (type == "1") console.log('sorted by budget:');
-        if (type == "2") console.log('sorted by expense:');
+        if (this.type == "1") console.log('sorted by budget:');
+        if (this.type == "2") console.log('sorted by expense:');
         console.log(byAmount);
         alert("check console");
     }
@@ -181,18 +185,23 @@ function eventListeners(){
 
   //new instance of UI Class
   const ui = new UI();
-  const sort = new SORT();
 
   sortBudget.addEventListener('submit', function(event){
       event.preventDefault();
       console.clear();
-      sort.sortingByAmount(ui.budgetitemList, "1");
+      //CONSTRUCTOR PATTERN ALLOWS CREATE NEW OBJECTS IN CERTAIN TYPE
+      const sort = new SORT(ui.budgetitemList, "1");
+      console.log(sort.sortingByAmount());
+      //CONSTRUCTOR PATTERN ALLOWS CREATE NEW OBJECTS IN CERTAIN TYPE
   })
 
   sortExpense.addEventListener('submit', function(event){
       event.preventDefault();
       console.clear();
-      sort.sortingByAmount(ui.budgetitemList, "2");
+      //CONSTRUCTOR PATTERN ALLOWS CREATE NEW OBJECTS IN CERTAIN TYPE
+      const sort = new SORT(ui.itemList, "2");
+      console.log(sort.sortingByAmount());
+      //CONSTRUCTOR PATTERN ALLOWS CREATE NEW OBJECTS IN CERTAIN TYPE
   })
 
   budgetForm.addEventListener('submit', function(event){

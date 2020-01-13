@@ -216,7 +216,7 @@ addRow(tableID){
 	}
 	
 
-  for (var i = 0; i < this.budgetitemList.length; i++) {
+/*   for (var i = 0; i < this.budgetitemList.length; i++) {
 		name = this.budgetitemList[i].title;
 		console.log(name);
 		
@@ -233,7 +233,7 @@ addRow(tableID){
 		 
 	  }
 	  
-  }  
+  }   */
   
 	//print
    for (var i = 0; i < this.budgetitemList.length; i++) { 

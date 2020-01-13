@@ -34,7 +34,7 @@ class UI {
     this.expenseForm = document.getElementById("expense-form");
     this.expenseInput = document.getElementById("expense-input");
     this.expenseAmountInput = document.getElementById("expense-amount-input");
-	this.expensePlan = document.getElementById("plan-expense-amount-input");
+/* 	this.expensePlan = document.getElementById("plan-expense-amount-input"); */
     this.expenseDateInput = document.getElementById("expense-date-input");
     //lists and
     this.expenseList = document.getElementById("expense-list");
@@ -131,7 +131,7 @@ class UI {
   submitExpenseForm(){
     const expenseValue = this.expenseInput.value;
     const amountValue = this.expenseAmountInput.value;
-	const planExpenseValue = this.expensePlan.value;
+/* 	const planExpenseValue = this.expensePlan.value; */
     const expenseDateValue = this.expenseDateInput.value;
     if(expenseValue === '' || amountValue === '' || amountValue < 0){
       this.expenseFeedback.classList.add('showItem');
@@ -144,13 +144,13 @@ class UI {
       let amount = parseInt(amountValue);
       this.expenseInput.value = '';
       this.expenseAmountInput.value = '';
-	  this.expensePlan.value = '';
+/* 	  this.expensePlan.value = ''; */
       this.expenseDateInput.value = '';
       let expense = {
         id: this.itemID,
         title: expenseValue,
         amount: amount,
-		plan: plan,
+/* 		plan: plan, */
         date: expenseDateValue
       }
       this.itemID++;
@@ -295,7 +295,6 @@ function eventListeners(){
   expenseForm.addEventListener('submit', function(event){
     event.preventDefault();
     ui.submitExpenseForm();
-
   })
 
 }

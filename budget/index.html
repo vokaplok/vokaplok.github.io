@@ -68,9 +68,14 @@
        <div class="form-group">
         <input type="text" class="form-control budget-input" id="budget-input">
        </div>
-       <h5 class="text-capitalize">Введіть суму</h5>
+	   <h5 class="text-capitalize">Введіть суму фактичного або запланованого доходу</h5>
+       <h5 class="text-capitalize">Фактичний</h5>
        <div class="form-group">
         <input type="number" class="form-control budget-input" id="budget-amount-input">
+       </div>
+	   <h5 class="text-capitalize">Запланований</h5>
+       <div class="form-group">
+        <input type="number" class="form-control budget-input" id="plan-budget-amount-input">
        </div>
        <h5 class="text-capitalize">Введіть дату</h5>
        <div class="form-group">
@@ -78,6 +83,7 @@
        </div>
        <!-- submit button -->
        <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">Додати дохід</button>
+<!-- 	    <input type="checkbox" name="credit"  value="true" id="credit" /><span>Кредит</span> -->
       </form>
 
       <!-- expense feedback -->
@@ -88,9 +94,14 @@
        <div class="form-group">
         <input type="text" class="form-control expense-input" id="expense-input">
        </div>
-       <h5 class="text-capitalize">Введіть суму</h5>
+	   <h5 class="text-capitalize">Введіть суму фактичної або запланованої витрати</h5>
+       <h5 class="text-capitalize">Фактична</h5>
        <div class="form-group">
         <input type="number" class="form-control expense-input" id="expense-amount-input">
+       </div>
+	   <h5 class="text-capitalize">Запланована</h5>
+       <div class="form-group">
+        <input type="number" class="form-control expense-input" id="plan-expense-amount-input">
        </div>
        <h5 class="text-capitalize">Введіть дату</h5>
        <div class="form-group">
@@ -98,7 +109,7 @@
        </div>
        <!-- submit button -->
        <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">Додати витрату</button>
-
+<!-- 	   <input type="checkbox" name="deposit"  value="true" id="deposit" /><span>Депозит</span> -->
       </form>
      </div>
         <form id="sort-form1">
@@ -107,7 +118,21 @@
         <form id="sort-form2">
             <button type="submit" id="sort2" class="sortbtn btn text-capitalize expense-submit">Сортувати за витратами</button>
         </form>
+		<form id="category-form">
+            <button type="submit" id="category" class="sortbtn btn text-capitalize category-submit">Оновити категорiї</button>
+        </form>
     </div>
+	<div>
+		<table id="tabled" style="width:100%">
+		  <tr>
+			<th>Категорія</th>
+			<th>Заплановані</th>
+			<th>Фактичні</th> 
+			<th>Різниця</th>
+<!-- 			<th>Періодичність</th> -->
+		  </tr>
+		</table>
+	</div>
    </div>
   </div>
  </div>
